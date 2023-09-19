@@ -1,5 +1,5 @@
 import { galleryItems } from "./gallery-items.js";
-// console.log(galleryItems);
+
 // Описаний в документації
 import SimpleLightbox from "simplelightbox";
 // Додатковий імпорт стилів
