@@ -28,5 +28,10 @@ form.addEventListener('submit', (e) => {
     message: messageInput.value,
   };
   console.log(currentState);
-  clearFormAndLocalStorage();
+  emailInput.value = '';
+  messageInput.value = '';
+  
+  // Видаляємо дані з локального сховища
+  localStorage.removeItem('feedback-form-state');
+  
 });
