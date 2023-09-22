@@ -30,8 +30,5 @@ form.addEventListener('submit', (e) => {
   console.log(currentState);
   emailInput.value = '';
   messageInput.value = '';
-  
-  // Видаляємо дані з локального сховища
   localStorage.removeItem('feedback-form-state');
-  
 });
