@@ -23,12 +23,16 @@ window.addEventListener('load', fillFormFields);
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const currentState = {
-    email: emailInput.value,
-    message: messageInput.value,
-  };
-  console.log(currentState);
-  emailInput.value = '';
-  messageInput.value = '';
-  localStorage.removeItem('feedback-form-state');
+  if (emailInput.value && messageInput.value) {
+    const currentState = {
+      email: emailInput.value,
+      message: messageInput.value,
+    };
+    console.log(currentState);
+    emailInput.value = '';
+    messageInput.value = '';
+    localStorage.removeItem('feedback-form-state');
+  } else {
+    alert('Увага! Всі поля форми мають бути заповнені!');
+  }
 });
